@@ -36,7 +36,7 @@ parameters = {
     "max_depth":[5,10,15]
 }
 
-cls=GridSearchCV(RandomForestClassifier(),param_grid=parameters,scoring="f1",cv=6,verbose=1,)
+cls=GridSearchCV(RandomForestClassifier(),param_grid=parameters,scoring="accuracy",cv=6,verbose=1,)
 cls.fit(x_train,y_train)
 print(cls.best_score_)
 print(cls.best_params_)
